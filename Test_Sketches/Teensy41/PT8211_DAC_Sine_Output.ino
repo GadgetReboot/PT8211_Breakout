@@ -3,6 +3,15 @@
 // Teensy 4.1 is used to generate sine waves on the left/right
 // channels of a PT8211 DAC so the analog outputs can be
 // observed on a scope.
+//
+// Pins from PT8211 to Teensy 4.1:    
+//      BCK  21
+//       WS  20
+//     Data  7
+//
+// More details about Teensy and PT8211  https://www.pjrc.com/store/pt8211_kit.html
+//
+// Gadget Reboot 
 
 #include <Audio.h>
 
