@@ -1,6 +1,6 @@
 /*
   ESP32 I2S MP3/WAV SD Card Playback Test
-
+ 
   Hardware:  Uses external I2S DAC or ESP32 built in DAC
 
   Uses ESP32-audioI2S Library https://github.com/schreibfaul1/ESP32-audioI2S
@@ -20,13 +20,14 @@
 #define SPI_SCK       18
 
 // I2S external DAC pins
-#define I2S_DOUT      22
-#define I2S_BCLK      14
-#define I2S_LRC       15
+#define I2S_DOUT      25   // data in to I2S module
+#define I2S_LRC       26   // WS (word select)
+#define I2S_BCLK      27   // bit clock
+
 
 // uncomment one of these to set up audio interface for internal/external DAC
-//Audio audio;  // use external I2S DAC
-Audio audio(true, I2S_DAC_CHANNEL_BOTH_EN);  // use esp32 internal DAC
+Audio audio;  // use external I2S DAC
+//Audio audio(true, I2S_DAC_CHANNEL_BOTH_EN);  // use esp32 internal DAC
 
 void setup() {
   Serial.begin(115200);
@@ -49,8 +50,8 @@ void setup() {
   audio.setVolume(12);
 
   // play specific mp3 or wav file on SD card
-  // audio.connecttoFS(SD,"/testfile.mp3");
-  audio.connecttoFS(SD, "/sine1k10k.wav");
+  audio.connecttoFS(SD,"/testfile.mp3");
+  //audio.connecttoFS(SD, "/testfile.wav");
 }
 
 void loop() {
