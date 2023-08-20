@@ -1,0 +1,315 @@
+EESchema Schematic File Version 4
+LIBS:GR_PT8211_Breakout-cache
+EELAYER 29 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "PT8211 Breakout"
+Date "2023-07-28"
+Rev "1"
+Comp "Gadget Reboot"
+Comment1 "https://www.youtube.com/gadgetreboot"
+Comment2 "https://github.com/GadgetReboot/PT8211_Breakout"
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 3575 4750 0    75   ~ 0
+L_CH
+Text Notes 3575 4550 0    75   ~ 0
+R_CH
+$Comp
+L PT8211:PT8211 U1
+U 1 1 64C435E7
+P 5875 4500
+F 0 "U1" H 5550 5150 50  0000 C CNN
+F 1 "PT8211" H 6025 5150 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6075 4400 50  0001 C CIN
+F 3 "https://www.akm.com/akm/en/file/datasheet/AK5720VT.pdf" H 6575 4350 50  0001 C CNN
+	1    5875 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 64C47CDC
+P 5275 3425
+F 0 "C2" H 5367 3471 50  0000 L CNN
+F 1 "100nF" H 5367 3380 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5275 3425 50  0001 C CNN
+F 3 "~" H 5275 3425 50  0001 C CNN
+	1    5275 3425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C1
+U 1 1 64C48249
+P 4875 3425
+F 0 "C1" H 4966 3471 50  0000 L CNN
+F 1 "47uF" H 4966 3380 50  0000 L CNN
+F 2 "Capacitor_SMD:C_Elec_4x5.4" H 4875 3425 50  0001 C CNN
+F 3 "~" H 4875 3425 50  0001 C CNN
+	1    4875 3425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R1
+U 1 1 64C493C8
+P 4625 3250
+F 0 "R1" V 4575 3100 50  0000 C CNN
+F 1 "10r" V 4575 3400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4625 3250 50  0001 C CNN
+F 3 "~" H 4625 3250 50  0001 C CNN
+	1    4625 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDREF #PWR0101
+U 1 1 64C4DC4E
+P 4875 3575
+F 0 "#PWR0101" H 4875 3325 50  0001 C CNN
+F 1 "GNDREF" H 4880 3402 50  0001 C CNN
+F 2 "" H 4875 3575 50  0001 C CNN
+F 3 "" H 4875 3575 50  0001 C CNN
+	1    4875 3575
+	1    0    0    -1  
+$EndComp
+Text Notes 3500 4050 0    75   ~ 0
++3.3V\n
+Wire Wire Line
+	4125 4100 5375 4100
+Wire Wire Line
+	5375 4200 4125 4200
+Wire Wire Line
+	4125 4300 5375 4300
+Wire Wire Line
+	4125 4000 4325 4000
+Wire Wire Line
+	4325 4000 4325 3250
+Wire Wire Line
+	4325 3250 4525 3250
+Wire Wire Line
+	4875 3575 4875 3525
+Wire Wire Line
+	4725 3250 4875 3250
+Wire Wire Line
+	4875 3250 4875 3325
+Wire Wire Line
+	4875 3250 5275 3250
+Wire Wire Line
+	5275 3250 5275 3325
+Connection ~ 4875 3250
+Wire Wire Line
+	5275 3250 5825 3250
+Wire Wire Line
+	5825 3250 5825 3800
+Connection ~ 5275 3250
+$Comp
+L power:GNDREF #PWR0102
+U 1 1 64C62BC7
+P 5275 3575
+F 0 "#PWR0102" H 5275 3325 50  0001 C CNN
+F 1 "GNDREF" H 5280 3402 50  0001 C CNN
+F 2 "" H 5275 3575 50  0001 C CNN
+F 3 "" H 5275 3575 50  0001 C CNN
+	1    5275 3575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5275 3575 5275 3525
+$Comp
+L power:GNDREF #PWR0103
+U 1 1 64C64E2B
+P 4225 4825
+F 0 "#PWR0103" H 4225 4575 50  0001 C CNN
+F 1 "GNDREF" H 4230 4652 50  0001 C CNN
+F 2 "" H 4225 4825 50  0001 C CNN
+F 3 "" H 4225 4825 50  0001 C CNN
+	1    4225 4825
+	1    0    0    -1  
+$EndComp
+Text Notes 3600 4150 0    75   ~ 0
+BCK
+Text Notes 3675 4250 0    75   ~ 0
+WS
+Text Notes 3650 4350 0    75   ~ 0
+DIN
+Text Notes 3625 4450 0    75   ~ 0
+GND
+Text Label 5675 3250 0    50   ~ 0
+3V3
+Text Label 4275 4100 0    50   ~ 0
+BCK
+Text Label 4275 4200 0    50   ~ 0
+WS
+Text Label 4275 4300 0    50   ~ 0
+DIN
+$Comp
+L power:GNDREF #PWR0104
+U 1 1 64C6E9E0
+P 5825 4675
+F 0 "#PWR0104" H 5825 4425 50  0001 C CNN
+F 1 "GNDREF" H 5830 4502 50  0001 C CNN
+F 2 "" H 5825 4675 50  0001 C CNN
+F 3 "" H 5825 4675 50  0001 C CNN
+	1    5825 4675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5825 4675 5825 4600
+$Comp
+L Device:CP1_Small C3
+U 1 1 64CD0C4A
+P 6550 4100
+F 0 "C3" V 6600 4225 50  0000 C CNN
+F 1 "47uF" V 6600 3925 50  0000 C CNN
+F 2 "Capacitor_SMD:C_Elec_4x5.4" H 6550 4100 50  0001 C CNN
+F 3 "~" H 6550 4100 50  0001 C CNN
+	1    6550 4100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP1_Small C4
+U 1 1 64CD1970
+P 6550 4300
+F 0 "C4" V 6600 4425 50  0000 C CNN
+F 1 "47uF" V 6600 4125 50  0000 C CNN
+F 2 "Capacitor_SMD:C_Elec_4x5.4" H 6550 4300 50  0001 C CNN
+F 3 "~" H 6550 4300 50  0001 C CNN
+	1    6550 4300
+	0    -1   -1   0   
+$EndComp
+Text Notes 3625 4650 0    75   ~ 0
+GND
+Wire Wire Line
+	6225 4100 6450 4100
+Wire Wire Line
+	6450 4300 6225 4300
+$Comp
+L Connector_Generic:Conn_01x08 J1
+U 1 1 64CDEA3B
+P 3925 4300
+F 0 "J1" H 3925 3800 50  0000 C CNN
+F 1 "Conn_01x08" H 3843 4726 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3925 4300 50  0001 C CNN
+F 3 "~" H 3925 4300 50  0001 C CNN
+	1    3925 4300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4125 4600 4225 4600
+Wire Wire Line
+	4225 4600 4225 4825
+Wire Wire Line
+	4125 4400 4225 4400
+Wire Wire Line
+	4225 4400 4225 4600
+Connection ~ 4225 4600
+Wire Wire Line
+	4125 4500 5250 4500
+Wire Wire Line
+	5250 4500 5250 4975
+Wire Wire Line
+	6650 4300 7050 4300
+Wire Wire Line
+	6650 4100 7600 4100
+Wire Wire Line
+	8250 4100 8250 5075
+Wire Wire Line
+	8250 5075 5150 5075
+Wire Wire Line
+	5150 5075 5150 4700
+Wire Wire Line
+	5150 4700 4125 4700
+Text Label 4275 4500 0    50   ~ 0
+R_CH
+Text Label 4275 4700 0    50   ~ 0
+L_CH
+Wire Wire Line
+	7800 4100 7975 4100
+$Comp
+L Device:C_Small C5
+U 1 1 64D5DF3B
+P 7975 4275
+F 0 "C5" H 8067 4321 50  0000 L CNN
+F 1 "1nF" H 8067 4230 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7975 4275 50  0001 C CNN
+F 3 "~" H 7975 4275 50  0001 C CNN
+	1    7975 4275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7975 4100 7975 4175
+$Comp
+L power:GNDREF #PWR01
+U 1 1 64D5DF46
+P 7975 4425
+F 0 "#PWR01" H 7975 4175 50  0001 C CNN
+F 1 "GNDREF" H 7980 4252 50  0001 C CNN
+F 2 "" H 7975 4425 50  0001 C CNN
+F 3 "" H 7975 4425 50  0001 C CNN
+	1    7975 4425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7975 4425 7975 4375
+Connection ~ 7975 4100
+Wire Wire Line
+	7975 4100 8250 4100
+$Comp
+L Device:C_Small C6
+U 1 1 64D608F4
+P 7425 4475
+F 0 "C6" H 7517 4521 50  0000 L CNN
+F 1 "1nF" H 7517 4430 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7425 4475 50  0001 C CNN
+F 3 "~" H 7425 4475 50  0001 C CNN
+	1    7425 4475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7425 4300 7425 4375
+$Comp
+L power:GNDREF #PWR02
+U 1 1 64D608FF
+P 7425 4625
+F 0 "#PWR02" H 7425 4375 50  0001 C CNN
+F 1 "GNDREF" H 7430 4452 50  0001 C CNN
+F 2 "" H 7425 4625 50  0001 C CNN
+F 3 "" H 7425 4625 50  0001 C CNN
+	1    7425 4625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7425 4625 7425 4575
+Wire Wire Line
+	7250 4300 7425 4300
+Wire Wire Line
+	7700 4975 7700 4300
+Wire Wire Line
+	7700 4300 7425 4300
+Wire Wire Line
+	5250 4975 7700 4975
+Connection ~ 7425 4300
+$Comp
+L Device:R_Small_US R3
+U 1 1 64D5FFF2
+P 7150 4300
+F 0 "R3" V 7100 4150 50  0000 C CNN
+F 1 "7.5K" V 7100 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7150 4300 50  0001 C CNN
+F 3 "~" H 7150 4300 50  0001 C CNN
+	1    7150 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small_US R2
+U 1 1 64D5D40D
+P 7700 4100
+F 0 "R2" V 7650 3950 50  0000 C CNN
+F 1 "7.5K" V 7650 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7700 4100 50  0001 C CNN
+F 3 "~" H 7700 4100 50  0001 C CNN
+	1    7700 4100
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC
